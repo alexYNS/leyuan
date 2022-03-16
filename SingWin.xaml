@@ -1,0 +1,80 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window1" Height="538" Width="402" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="b001.jpg"/>
+    </Window.Background>
+    <Grid HorizontalAlignment="Left" Height="179" Margin="0,155,0,0" VerticalAlignment="Top" Width="402">
+        <Grid.Background>
+            <SolidColorBrush Color="#FF2B2B2B" Opacity="0.615"/>
+        </Grid.Background>
+        <Label Content="账号：" HorizontalAlignment="Left" Margin="91,17,0,0" VerticalAlignment="Top" Width="48" Height="33" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="95,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.6"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label Content="密码：" HorizontalAlignment="Left" Margin="91,82,0,0" VerticalAlignment="Top" Width="50" Height="30" Foreground="White"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="95,108,0,0" VerticalAlignment="Top" Width="180" Height="25">
+            <PasswordBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.6"/>
+            </PasswordBox.Background>
+        </PasswordBox>
+        <Button Content="授权" HorizontalAlignment="Left" Margin="96,144,0,0" VerticalAlignment="Top" Width="75" Foreground="White" pu:ButtonHelper.ButtonStyle="Hollow" pu:ButtonHelper.CornerRadius="5">
+            <Button.Background>
+                <SolidColorBrush Color="#FF959595" Opacity="0.6"/>
+            </Button.Background>
+        </Button>
+        <Button Content="登录" HorizontalAlignment="Left" Margin="199,144,0,0" VerticalAlignment="Top" Width="75" Click="b1" Foreground="White" pu:ButtonHelper.ButtonStyle="Hollow" pu:ButtonHelper.CornerRadius="5">
+            <Button.Background>
+                <SolidColorBrush Color="#FF959595" Opacity="0.6"/>
+            </Button.Background>
+        </Button>
+        <Button Content="X" HorizontalAlignment="Left" Margin="356,5,0,0" VerticalAlignment="Top" Width="30" Height="17" Foreground="White" pu:ButtonHelper.ButtonStyle="Hollow"
+            pu:ButtonHelper.CornerRadius="3" Click="EXIT_DS">
+            <Button.Background>
+                <SolidColorBrush Color="#FF959595" Opacity="0.6"/>
+            </Button.Background>
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="154" Margin="1,-154,0,0" VerticalAlignment="Top" Width="401">
+            <Grid.Background>
+                <ImageBrush ImageSource="background_header.jpg"/>
+            </Grid.Background>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="185" Margin="1,180,0,-185" VerticalAlignment="Top" Width="200">
+            <Label Content="声纹登录" Margin="0" VerticalAlignment="Top" Width="200" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Foreground="White">
+                <Label.Background>
+                    <SolidColorBrush Color="#FF959595" Opacity="0.6"/>
+                </Label.Background>
+            </Label>
+            <Grid HorizontalAlignment="Left" Height="159" Margin="0,25,0,0" VerticalAlignment="Top" Width="200">
+                <Grid.Background>
+                    <SolidColorBrush Color="#FF282B29" Opacity="0.6"/>
+                </Grid.Background>
+            </Grid>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="184" Margin="201,180,0,-185" VerticalAlignment="Top" Width="200">
+            <Label Content="指纹登录" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Center" Foreground="White">
+                <Label.Background>
+                    <SolidColorBrush Color="#FF959595" Opacity="0.6"/>
+                </Label.Background>
+            </Label>
+            <Grid HorizontalAlignment="Left" Height="159" Margin="0,25,0,0" VerticalAlignment="Top" Width="200">
+                <Grid.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.6"/>
+                </Grid.Background>
+            </Grid>
+        </Grid>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="0,364,0,-205" TextWrapping="Wrap" Text="乐园案件管理系统" VerticalAlignment="Top" Width="402" HorizontalContentAlignment="Center" Foreground="White">
+            <TextBox.Background>
+                <SolidColorBrush Color="#FF464444" Opacity="0.6"/>
+            </TextBox.Background>
+        </TextBox>
+    </Grid>
+</Window>

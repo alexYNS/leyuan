@@ -1,0 +1,100 @@
+﻿<Window x:Name="windows_DSystem" x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="875" Width="1669.5" ResizeMode="NoResize"  MouseMove="WIND_MOUS_MOVE" WindowStyle="None" >
+    <Window.Background>
+        <SolidColorBrush Color="#FFD4D4D4" Opacity="0.71"/>
+    </Window.Background>
+    <!--顶部工具栏-->
+    <DockPanel x:Name="DOCK_BACK_BORD" Margin="0" MouseEnter="DOCK_BACK_BORD_MOUS_ENTR" MouseMove="DOCK_BACK_BORD_MOUS_MOVE" MouseDown="DACK_BACK_BORD_MOUS_DOWN">
+        <DockPanel.Background>
+            <ImageBrush ImageSource="background.jpg"/>
+        </DockPanel.Background>
+        <!--顶部工具栏-->
+
+        <!--顶部菜单栏-->
+        <DockPanel Height="28" LastChildFill="False" DockPanel.Dock="Top" Margin="0" Background="#FFE6E6E6">
+            <StackPanel Height="28" Width="100" Background="#FF974F4F" Orientation="Horizontal">
+                <TextBox x:Name="WIND_TITL" TextWrapping="Wrap" Text="乐园派出所-赖乐平" Width="100" HorizontalContentAlignment="Center" FontSize="10" FontWeight="Bold" Background="#FF2C2D3C" Foreground="White"/>
+            </StackPanel>
+            <StackPanel Height="28" Width="1492" Background="#FFE6E6E6" Orientation="Horizontal">
+                <Button Content="案件" Width="44" Background="#FFAAAAAA" BorderBrush="#FF555555" Foreground="Black"/>
+                <Button Content="流程" Width="44" Background="#FFAAAAAA" Foreground="Black"/>
+                <Button Content="卷目" Width="44" Background="#FFAAAAAA" Foreground="Black"/>
+                <Button Content="卷页" Width="44" Background="#FFAAAAAA" Foreground="Black"/>
+                <Button Content="公文" Width="44" Background="#FFAAAAAA" Foreground="Black"/>
+                <Button Content="法条" Width="44" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="呈报" Width="44" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="辖区" Width="44" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="网格" Width="44" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="75" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="75" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="75" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="76" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="74" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="75" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="75" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="75" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="75" Foreground="Black" Background="#FFAAAAAA"/>
+                <Button Content="-" Width="75" Foreground="Black" Background="#FFAAAAAA"/>
+            </StackPanel>
+            <StackPanel Height="28" Width="78" Background="#FFE6E6E6" Orientation="Horizontal" DockPanel.Dock="Right">
+                <Button Content="-" Height="28" VerticalAlignment="Top" Click="MAIN_WIND_MIN" Background="#FF2C2D3C" Width="23" Margin="3,0,0,0"/>
+                <Button Content="+" Height="28" VerticalAlignment="Top" Click="MAIN_WIND_MAX" Background="#FF2C2D3C" Width="23" Margin="3,0,0,0"/>
+                <Button Content="x" Height="28" VerticalAlignment="Top" Click="EXIT_MSIN_WIND" Background="#FF2C2D3C" Width="23" Margin="3,0,0,0"/>
+            </StackPanel>
+        </DockPanel>
+        <!--顶部菜单栏-->
+
+
+        <!--右侧属性栏-->
+        <DockPanel x:Name="DUCK_RIGHT" LastChildFill="False" Width="398" DockPanel.Dock="Right" Margin="0" MaxWidth="400">
+            <DockPanel.Background>
+                <SolidColorBrush Color="#FFF3F3F3" Opacity="0.95"/>
+            </DockPanel.Background>
+        </DockPanel>
+        <!--右侧属性栏-->
+
+        <!--底部状态栏-->
+        <DockPanel x:Name="DOCK_BUTTON_STUS" Height="20" LastChildFill="False"  Background="#FF2C2D3C" DockPanel.Dock="Bottom" Margin="0,0,-400,0">
+            <TextBox x:Name="TEXT_SHOW_DOCK_BACK_X_Y" BorderThickness="1,1,1,1" BorderBrush="{x:Null}" TextWrapping="Wrap" Text="TextBox" Background="#FF2C2D3C" Foreground="WhiteSmoke" HorizontalContentAlignment="Stretch" Margin="3,3,0,2" FontSize="9"/>
+        </DockPanel>
+        <!--底部状态栏-->
+
+        <DockPanel x:Name="DOCK_TOOL_BORD" Height="31" LastChildFill="False" VerticalAlignment="Top" Background="#FF555555" DockPanel.Dock="Top" Margin="0,0,-400,0"/>
+
+        <!--左侧操作栏-->
+        <DockPanel x:Name="DUCK_LIFT" Width="372" RenderTransformOrigin="0.5,0.5" LastChildFill="False" MouseEnter="DOCK_LIFT_MOUS_ENTR" MouseLeave="DOCK_LIFT_MOUS_LEVE" Margin="0" MouseMove="DOCK_LIFT_MOUS_MOVE">
+           
+            <DockPanel.Background>
+                <SolidColorBrush Color="#FFD1D1D1" Opacity="0.8"/>
+            </DockPanel.Background>
+            <DockPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DockPanel.RenderTransform>
+            <StackPanel Height="0" VerticalAlignment="Top" Width="100" DockPanel.Dock="Top"/>
+        </DockPanel>
+        
+        <Button Content="Button" Height="0" VerticalAlignment="Top" Width="75"/>
+        <Grid DockPanel.Dock="Top" Margin="52,0,86,0">
+            <Grid.Background>
+                <SolidColorBrush Color="#FFF3F3F3" Opacity="0.95"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="99*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+    </DockPanel>
+    <!--左侧操作栏-->
+</Window>
